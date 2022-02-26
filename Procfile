@@ -1,0 +1,1 @@
+worker: python testproxy1.py
