@@ -46,7 +46,7 @@ def collect_data():
 
     r = requests.get(
         url=f'https://api.dmarket.com/exchange/v1/market/items?side=market&orderBy=updated&orderDir=desc&title=&priceFrom=2&priceTo=1540&treeFilters=exterior%5B%5D=factory%20new,exterior%5B%5D=minimal%20wear,exterior%5B%5D=field-tested,exterior%5B%5D=well-worn,exterior%5B%5D=battle-scarred,category_1%5B%5D=not_souvenir&gameId=a8db&types=dmarket&cursor=&limit=100&currency=USD',
-        headers={'user-agent': f'{UserAgent().random}'}, proxies=proxies)
+        headers={'user-agent': f'{UserAgent().random}'})
     # print(r.status_code)
     data = r.json()
     items = data.get('objects')
